@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Sample Flask Project</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<style>
+body{
+	 /*background-image:url(images/blue.jpg);*/
+     background-color:coral;
+	 background-position:center;
+	 background-size:cover;
+	 overflow-x:hidden;	
+	 height: 100vh;
+}
+.cont_1{
+	background-color: rgba(238, 238, 238, 0.28);
+    width: 75%;
+    margin: auto;
+    border-radius: 15px;	
+	height: 75vh;
+    overflow-y: auto;
+}
+</style>
+</head>
+
+<body>
+</br></br>
+<div>
+
+  {% if error %}
+    <h4 style="position: relative;left: 15%;color: rgb(240, 248, 255);font-size: 30px;">error - {{ error }}</h4>
+    {% else %}
+
+<div class="cont_1">
+<table style="width:70%; margin:auto;color: rgb(240, 248, 255);">
+  <tr>
+    <th style="font-size: 20px;color: rgb(240, 248, 255);">Project Name</th>
+    <th style="font-size: 20px;color: rgb(240, 248, 255);">version</th>
+  </tr>
+
+  <tr>
+    <td><p style="font-size: 17px;color: rgb(240, 248, 255);">{{ pos_items.project }}</p></td>
+    <td><p style="font-size: 17px;color: rgb(240, 248, 255);">{{ pos_items.version }}</p></td>
+  </tr>
+
+      
+</table>
+    {% endif %}
+    </div>
+</div>
+
+
+</body>
+</html>
